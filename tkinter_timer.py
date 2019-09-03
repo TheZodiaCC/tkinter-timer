@@ -58,7 +58,9 @@ class Timer:
             if self.sec >= 59:
                 self.sec = 0
                 self.mins += 1
+                self.i.set(self.sec)
                 self.b.set(self.mins)
+                time.sleep(1)
             else:
                 pass
 
